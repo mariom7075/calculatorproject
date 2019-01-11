@@ -86,10 +86,12 @@ namespace MyCalculator.Specs.Features
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Add two positive numbers")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Complex Addition")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("important")]
         public virtual void AddTwoPositiveNumbers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two positive numbers", ((string[])(null)));
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two positive numbers", new string[] {
+                        "important"});
+#line 9
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -98,11 +100,11 @@ this.ScenarioSetup(scenarioInfo);
                         "29"});
             table1.AddRow(new string[] {
                         "13"});
-#line 9
+#line 10
  testRunner.Given("I have entered the following numbers", ((string)(null)), table1, "Given ");
-#line 13
- testRunner.When("I choose add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
+ testRunner.When("I choose add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
  testRunner.Then("the result should be 42", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -111,15 +113,15 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void AddTwoNumbersOutline(string @case, string a, string b, string result, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers (outline)", exampleTags);
-#line 16
-this.ScenarioSetup(scenarioInfo);
 #line 17
- testRunner.Given(string.Format("I have entered {0} into the calculator", a), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 18
- testRunner.And(string.Format("I have entered {0} into the calculator", b), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", a), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
- testRunner.When("I choose add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And(string.Format("I have entered {0} into the calculator", b), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
+ testRunner.When("I choose add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
  testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -135,7 +137,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "120")]
         public virtual void AddTwoNumbersOutline_Classic()
         {
-#line 16
+#line 17
 this.AddTwoNumbersOutline("classic", "50", "70", "120", ((string[])(null)));
 #line hidden
         }
@@ -150,7 +152,7 @@ this.AddTwoNumbersOutline("classic", "50", "70", "120", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "120")]
         public virtual void AddTwoNumbersOutline_Commutativity()
         {
-#line 16
+#line 17
 this.AddTwoNumbersOutline("commutativity", "70", "50", "120", ((string[])(null)));
 #line hidden
         }
@@ -165,7 +167,7 @@ this.AddTwoNumbersOutline("commutativity", "70", "50", "120", ((string[])(null))
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "42")]
         public virtual void AddTwoNumbersOutline_Zero()
         {
-#line 16
+#line 17
 this.AddTwoNumbersOutline("zero", "0", "42", "42", ((string[])(null)));
 #line hidden
         }

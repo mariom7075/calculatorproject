@@ -5,6 +5,7 @@ Rules for complex addition:
 - Works with zero
 - Commutative
 
+@important
 Scenario: Add two positive numbers
 	Given I have entered the following numbers
 		| number |
